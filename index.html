@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			font-family: arial, sans-serif;
+		}
+		.first-div{
+			width: 100%;
+			height: 80px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.nav-div{
+			width: 50%;
+			height: 100%;
+			display: flex;
+			justify-content:center;
+			align-items: center;
+			gap: 20px;
+		
+		}
+		.nav-div .nav{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.nav a {
+			width: 100px;
+			height: 35px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			text-decoration: none;
+			border-radius: 15px;
+			background-color: black;
+			transition: all 0.5s;
+		}
+		.nav a:hover{
+			background-color: white;
+			color: black;
+		}
+		.sign .btn_get_started{
+        font-family: ;
+        text-transform: uppercase;
+        font-family: 500;
+        font-size: 14px;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 8px 28px;
+        border-radius: 50px;
+        margin: 10px;
+        text-decoration: none;
+        border: 2px solid black;
+        background-color: transparent;
+        color: black;
+        transition: 0.5s all;
+      }
+      .sign .btn_get_started:hover{
+      	text-decoration: none;
+        background-color: #009970;
+        border: 2px solid #009970;
+        color: white;
+      }
+		.sign{
+			/*width: 20%;
+			height: 100%;
+			display: flex;*/
+			justify-content: center;
+			align-items: center;
+			float: left;
+			margin-left: 410px;
+		
+		}
+		/*.sign button{
+			width: 80px;
+			height: 40px;
+			border-radius: 50px;
+			background-color: skyblue;
+			border: 2px solid black;
+			border: none;
+		}
+		.sign button a{
+			text-decoration: none;
+			color: white;
+			transition: all 0.3s;
+
+		}
+		.sign button:hover{
+			background-color: navy;
+		}*/
+		.second-div{
+			width: 100%;
+			height: 100vh;
+			background-image: url(pic4.jpg);
+			background-size: 100%  100%;
+				}
+			.japs{
+				width: 100%;
+				height: 87.5vh;
+				background-color: rgba(0, 0, 0, 0.5);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.japs .japs2{
+				width: 60%;
+				height: 20%;
+				display: flex;
+				align-items: center;
+				border-radius: 15px;
+				background-color: rgba(255, 255, 255, 0.4);
+			}
+			}
+			.typing{
+				color: darkred;
+			}
+
+		/*.second-div .home-1{
+			width: 50%;
+			height: 100%;
+			background-image: url(home-2.jpeg);
+			background-size: 100% ,100%;
+			background-repeat: no-repeat;
+		}
+		.second-div .home-2{
+			width: 50%;
+			height: 100%;
+			background-image: url(home-1.jpeg);
+			background-size: 100% ,100%;
+			background-repeat: no-repeat;
+		}*/
+		.main-box{
+			width: 100%;
+			height: 30vh;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.main-box .box{
+			width: 15%;
+			height: 100%;
+			justify-content: center;
+			background-color: grey;
+
+		}
+		.box h4{
+			width: 100%;
+			height: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			margin-top: 30px;
+			border-radius: 10px;
+		}
+		.box p{
+			margin: 15px;
+		}
+
+		.second-box{
+			width: 100%;
+			height: 80vh;
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+		}
+		.second-box .pic-box-1{
+			width: 22%;
+			height: 35vh;
+			background-image: url(image.jpeg);
+			background-size: 100%, 100%;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+		}
+		.second-box .pic-box-2{
+			width: 22%;
+			height: 35vh;
+			background-image: url(image1.jpeg);
+			background-size: 100%, 100%;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+		}
+		.second-box .pic-box-3{
+			width: 22%;
+			height: 35vh;
+			background-image: url(image-2.jpeg);
+			background-size: 100%, 100%;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+		}
+		.second-box .pic-box-4{
+			width: 22%;
+			height: 35vh;
+			background-image: url(image3.jpeg);
+			background-size: 100%, 100%;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+		}
+		.second-box .pic-box-5{
+			width: 22%;
+			height: 35vh;
+			background-image: url(image4.jpeg);
+			background-size: 100%, 100%;
+			background-repeat: no-repeat;
+		}
+		.second-box .pic-box-6{
+			width: 22%;
+			height: 35vh;
+			background-image: url(image5.jpeg);
+			background-size: 100%, 100%;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+		}
+		.second-box .pic-box-7{
+			width: 22%;
+			height: 35vh;
+			background-image: url(image6.jpeg);
+			background-size: 100%, 100%;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+		}
+		.second-box .pic-box-8{
+			width: 22%;
+			height: 35vh;
+			background-image: url(image7.jpeg);
+			background-size: 100%, 100%;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+		}
+		.instructor{
+			width: 100%;
+			height: 50vh;
+			background-color: dimgrey;
+			display: ;
+		}
+		/*.instructor .sh-oib{
+			width: 20%;
+			height: 100%;
+/*			background-image: url(shoaib.jfif);*/
+			background-size: 100%, 100%;
+			background-repeat: no-repeat;
+		}*/
+		.sh-oib{
+			width: 20%;
+			height: 100%;
+			background-color: darkred;
+		}
+		.instructor .para-1{
+			width: 60%;
+			height: 100%;
+			background-color: green;
+		}
+		.instructor .para-1 p{
+			width: 100%;
+			height: 100%;
+		}
+		.test{
+			width: 100%;
+			height: 50vh;
+			display: flex;
+			justify-content: space-around;
+		}
+		.test .one{
+			width: 30%;
+			height: 100%;
+			border-radius: 20px;
+		}
+			.test .two{
+			width: 65%;
+			height: 100%;
+		}
+
+
+
+
+.container{
+			max-width: 1170px;
+			background-color: ;
+			margin: auto;
+		}
+		.row{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		ul{
+			list-style: none;
+		}
+		.footer{
+			background-color: #24262b;
+			padding: 70px 0;
+		}
+		.footer-col{
+			width: 25%;
+			padding: 0 15px;
+		}
+		.footer-col h4{
+			font-size: 18px;
+			color: #ffffff;
+			text-transform: capitalize;
+			margin-bottom: 35px;
+			font-weight: 500;
+			position: relative;
+		}
+		.footer-col h4::before{
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: -10px;
+			background-color: #e91e63;
+			height: 2px;
+			box-sizing: border-box;
+			width: 50px;
+		}
+		.footer-col ul li:not(:last-child){
+			margin-bottom: 10px;
+		}
+		.footer-col ul li a{
+			font-size: 16px;
+			text-transform: capitalize;
+			color: #ffffff;
+			text-decoration: none;
+			font-weight: 300;
+			color: #bbbbbb;
+			display: block;
+			transition: all 0.3s ease ;
+		}
+		.footer-col ul li a:hover{
+			color: #ffffff;
+			padding-left: 8px;
+		}
+		.footer-col .social-links a{
+			display: inline-block;
+			height: 40px;
+			width: 40px;
+			background-color: rgba(255, 255, 255, 0.2);
+			margin: 0 10px 10px 0;
+			text-align: center;
+			line-height: 40px;
+			border-radius: 50%;
+			color: #ffffff;
+			transition: all 0.5s ease;
+		}
+		.footer-col .social-links a:hover{
+			color: #24262b;
+			background-color: #ffffff;
+		}
+		@media(max-width: 767px){
+			.footer-col{
+			width:50%;
+			margin-bottom:30px;
+		}
+	}
+	@media(max-width: 574px){
+			.footer-col{
+			width:100%;
+		}
+	}
+	</style>
+</head>
+<body>
+
+<!-- 	<div class="first-div">
+		 <div>
+		<h3>JAPS</h3>
+	</div> -->
+	<!-- <div class="nav-div">
+		<nav class="nav">
+			<a href="">Home</a>
+			<a href="">About US</a>
+			<a href="">Contact Us</a>
+		</nav>
+	</div>
+	<div class="sign">
+		<button><a href="">Sign Up</a> </button>
+	</div>
+</div>  -->
+<div class="second-div">
+		<div class="first-div">
+		<!-- <div>
+		<h3>JAPS</h3>
+	</div> -->
+	<div class="nav-div">
+		<nav class="nav">
+			<a href="">Home</a>
+			<a href="">About US</a>
+			<a href="">Contact Us</a>
+		</nav>
+	</div>
+	<div class="sign">
+	<a href="file:///G:/Creations/japs/sign%20up.html" class="btn_get_started">Sign Up</a>
+</div>
+	<!-- <div class="sign">
+		<button><a href="file:///G:/Creations/japs/sign%20up.html">Sign Up</a> </button>
+	</div> -->
+</div>
+<div class="japs"> <div class="japs2">
+	<h1 class="h1" style="margin-left: 22px;">
+	Welcome To <span class="typing"></span>
+</h1>
+</div>
+</div>
+<br><br><br>
+
+<div class="main-box">
+	<div class="box" style="background-color:darkgrey; border-radius: 10px;">
+	 <h4>Admission procedure</h4>
+	 <p>There is no written test for pre-school. The admission test for primary and secondary school...
+</p>
+	</div>
+	<div class="box" style="background-color:darkcyan; border-radius: 10px;">
+		<h4>ACADEMICS</h4>
+		<p>The JAPS Academic / Training Department works very closely with teachers for a...
+</p>
+	</div>
+	<div class="box" style="background-color: blue; border-radius: 10px;">
+		<h4>EXAMINATIONS</h4>
+		<p>The academic year commences from April and continues till March of next year. There are 2...
+</p>
+	</div>
+	<div class="box" style="background-color:orange; border-radius: 10px;">
+		<h4>APPLY ONLINE</h4>
+		<p>Register your child with us at the nearest branch of The Educators.</p>
+	</div>
+</div>
+<br><br><br>
+<br><br>
+
+<div class="second-box">
+	<div class="pic-box-1"></div>
+	<div class="pic-box-2"></div>
+	<div class="pic-box-3"></div>
+	<div class="pic-box-4"></div>
+	<div class="pic-box-5"></div>
+	<div class="pic-box-6"></div>
+	<div class="pic-box-7"></div>
+	<div class="pic-box-8"></div>
+</div>
+<br><br><br><br>
+<!-- <div class="instructor">
+	<div class="sh-oib"><img src="shoaib.jfif" width="300px" height="300px">
+	</div> -->
+<!-- 	<div class="para-1"><h2>Instructor SMIT & WMA</h2>
+		<p>Mr. Shoaib Ahmed Soomro is an exceptional teacher in the field of Web & Mobile Application Development. His deep knowledge and passion for technology are evident in every lesson, where he skillfully breaks down complex concepts into easily understandable components. With a patient and encouraging approach, Mr. Shoaib fosters an engaging learning environment that inspires students to reach their full potential. His dedication to staying updated with the latest industry trends ensures that his students are well-prepared for real-world challenges. Under his guidance, I have gained invaluable skills that will serve as a strong foundation for my future career. His commitment to excellence and student success makes him a truly outstanding educator.</p></div>
+</div> -->
+<br><br><br>
+<div class="test">
+	<div class="one"><img style="border-radius: 20px; margin-left: 40px;" src="shoaib.jfif" width="300px" height="320px"></div>
+	<div class="two"><h2 style="text-align: center; margin-top: 30px; font-size: 30px; font-weight: 400;" >Instructor SMIT & WMA</h2>
+		<p style="text-align: center; margin-top:30px; word-spacing: 5px; letter-spacing: 2px; font-size: 18px; font-weight:150">Mr. <b>Shoaib Ahmed Soomro</b> is an exceptional teacher in the field of Web & Mobile Application Development. His deep knowledge and passion for technology are evident in every lesson, where he skillfully breaks down complex concepts into easily understandable components. With a patient and encouraging approach, Mr. Shoaib fosters an engaging learning environment that inspires students to reach their full potential. His dedication to staying updated with the latest industry trends ensures that his students are well-prepared for real-world challenges. Under his guidance, I have gained invaluable skills that will serve as a strong foundation for my future career. His commitment to excellence and student success makes him a truly outstanding educator.</p></div>
+</div>
+<br><br><br>
+
+
+
+
+<br>
+<br>
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="footer-col">
+					<h4>Contact Us</h4>
+					<ul>
+						<li><a href="#">Help Desk</a> </li>
+						<li><a href="#">locate us</a> </li>
+						<li><a href="#">careers</a></li>
+						<li><a href="#">FAQS</a></li>
+				
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Admission</h4>
+					<ul>
+						<li><a href="">Apply Online</a></li>
+						<li><a href="">Admission procedure</a></li>
+						<li><a href="">Academics</a></li>
+						<li><a href="">examinations</a></li>
+						<li><a href="">News & events</a></li>
+					</ul>
+				</div>
+				<!-- <div class="footer-col">
+					<h4>online shop</h4>
+					<ul>
+						<li><a href="">watch</a></li>
+						<li><a href="">bag</a></li>
+						<li><a href="">shoes</a></li>
+						<li><a href="">dress</a></li>
+					</ul>
+				</div> -->
+				<div class="footer-col">
+					<h4>follow us</h4>
+					<div class="social-links">
+						<a href=""><i class="fab fa-facebook-f"></i></a>
+						<a href=""><i class="fab fa-twitter"></i></a>
+						<a href=""><i class="fab fa-instagram"></i></a>
+						<a href=""><i class="fab fa-linkedin-in"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript">
+		var typed = new Typed(".typing", {
+    strings: ["JEEJAL AMAN PUBLIC SCHOOL "],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true,
+  });
+	</script>
+</body>
+</html>

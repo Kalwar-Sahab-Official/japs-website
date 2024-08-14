@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+   <style type="text/css">
+      *{
+         margin: 0;
+         padding: 0;
+         font-family: arial,sans-serif;
+      }
+
+      .maindiv{
+         width: 100%;
+         height: 100vh;
+         position: relative;
+         background-image: url(form.jpeg);
+         background-size: 100% 100%;
+      }
+      .box{
+         width: 400px;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         padding: 50px;
+/*           background-color: rgba(200, 200, 200, 0.2)*/
+        background-color: rgba(0, 0, 0, 0.6);
+         border-radius: 10px;
+      }
+      .box h1{
+         margin-bottom:30px ;
+         color: #fff;
+         text-align: center;
+         text-transform: capitalize;
+      }
+      .box .inputBox{
+         position: relative;
+      }
+      .inputBox input{
+         width: 100%;
+         padding: 10px;
+         font-size: 16px;
+         color: #fff;
+         letter-spacing: 1px;
+         margin-bottom: 30px;
+         border: none;
+         border-bottom: 1px solid #fff;
+         background: transparent;
+         outline: none;
+
+      }
+      .box .inputBox label{
+         position: absolute;
+         top: 0%;
+         left: 0%;
+         letter-spacing: 1px;
+         padding: 10px 0;
+         font-size: 16px;
+         color: #fff;
+         transition: 0.5s;
+      }
+      .box .inputBox input:focus ~ label,.box .inputBox input:valid ~ label{
+         top: -20px;
+         left: 0;
+         color:#03a9f4 ;
+         font-size: 12px;
+
+      }
+      .box input[type="submit"]{
+         background: transparent;
+         border: none;
+         outline: none;
+         color: #fff;
+         background-color: #03a9f4;
+         padding: 8px 16px;
+         border-radius: 5px;
+         font-size: 14px;
+      }
+   </style>
+	<title></title>
+</head>
+<body>
+      <div class="maindiv">
+      <div class="box">
+         <h1>log in form</h1>
+         <form  onsubmit="Signup(event)">
+            <div class="inputBox">
+               <input type="email" name="email" autocomplete="off" required id="email">
+               <label> emial</label>
+            </div>
+            <div class="inputBox">
+               <input type="password" name="password" autocomplete="off" required id="password">
+               <label> password</label>
+            </div>
+
+            <input type="submit" name="" value="login" id="">
+         </form>
+         
+      </div>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- <form onsubmit="Signup(event)">
+		<h1>Sign Up</h1>
+		<input type="email" name="email" id="email">
+		<input type="password" name="password" id="password">
+		<button>Submit</button>
+	</form> -->
+
+	<!-- <form onsubmit="Login(event)">
+		<h1>Log In</h1>
+		<input type="emial" name="email" id="email">
+		<input type="password" name="password" id="password">
+		<button>Submit</button>
+	</form> -->
+	<script type="text/javascript" src="java.js"></script>
+
+	<!-- <script type="text/javascript">
+		
+
+const Signup = async (e) => {
+   e.preventDefault()
+   const email = document.getElementById("email").value;
+   const password = document.getElementById("password").value;
+   console.log(email, password);
+
+   try {
+      const result = await firebase.auth().createUserWithEmailAndPassword(email, password);
+      // await result.user.updateProfile({
+      //    displayName: "User"
+      // })
+
+
+      // craeteusercollection(result.user)
+      // await result.user.sendEmailVerification()
+      // console.log(result);
+      // alert(`wellcom ${result.user.email}`)
+
+
+
+   } catch (error) {
+      console.log(error)
+      alert(error.message)
+
+   }
+   email.value = ""
+   email.password = ""
+}
+
+
+// const Login = async (e) => {
+//    e.preventDefault()
+//    const email = document.getElementById("email").value;
+//    const password = document.getElementById("password").value;
+//    console.log(email, password);
+
+//    try {
+//       const result = await firebase.auth().signInWithEmailAndPassword(email, password)
+//       console.log(result);
+//       alert(`user is successfully login ${result.user.email}`)
+//    } catch (error) {
+//       console.log(error);
+//       alert("valid_password")
+
+//    }
+
+// }
+
+
+const Login = async(e)=>{
+    e.preventDefault()
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+     console.log( email, password);
+   try {
+    const results =  await firebase.auth().signInWithEmailAndPassword(email, password);
+    console.log(results)
+    alert(`successfully login ${results.user.email} suc`)
+   } catch (error) {
+    console.log(error);
+    alert("valid_password")
+   }
+   email.value = ""
+   email.password = ""
+}
+// const logout = ()=>{
+//     firebase.auth().signOut()
+// }
+
+// const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
+//     if (user) {
+//       /// new used 
+//       //getuserinfo(user.uid)
+//       getuserinfoRealtime(user.uid)
+//     console.log(user)
+//     } else {
+//       console.log("Signout user successfully")
+//       alert("Signout user successfully")
+//       // getuserinfo(null)
+//       getuserinfoRealtime(null)
+//     }
+//   });
+
+
+
+// const Logout = async () => {
+//    firebase.auth().signOut()
+
+//    await firebase.auth().onAuthStateChanged((user) => {
+//       if (user) {
+//          // getuserinfoRealtime(user.uid)
+//          console.log(user);
+//       } else {
+   
+//          console.log(`user successfully Logout`);
+//          alert(`user successfully Logout`)
+//          // getuserinfoRealtime(null)
+//       }
+//    });
+// }
+
+
+
+// const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
+//    if (user) {
+//      /// new used 
+//      //getuserinfo(user.uid)
+//      getuserinfoRealtime(user.uid)
+//    console.log(user)
+//    } else {
+//      console.log("Signout user successfully")
+//      alert("Signout user successfully")
+//      // getuserinfo(null)
+//      getuserinfoRealtime(null)
+//    }
+//  });
+
+
+// async function google() {
+//    console.log("hello");
+//    try {
+//       var provider = new firebase.auth.GoogleAuthProvider();
+//       const result = await firebase
+//    }
+// }
+
+	</script>
+ -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+	<script type="text/javascript">
+		 const firebaseConfig = {
+    apiKey: "AIzaSyDe17AJGorMrPZEsmYSLTw7NCvBmMPLOig",
+    authDomain: "first-project-d07b6.firebaseapp.com",
+    projectId: "first-project-d07b6",
+    storageBucket: "first-project-d07b6.appspot.com",
+    messagingSenderId: "243251376173",
+    appId: "1:243251376173:web:f690356b22dbd4b81b88a4",
+    measurementId: "G-R83T0T5S76"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+
+	</script>
+
+
+</body>
+</html>
